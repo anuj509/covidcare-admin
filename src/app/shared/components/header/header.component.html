@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button *ngIf="currentUser" mat-icon-button (click)="toggleSideBar()">
+          <mat-icon class="mat-18">menu</mat-icon>
+      </button>
+      <div fxFlex fxLayout="row" fxLayoutAlign="flex-start">
+        <span>{{currentUser?.user?.company?.name}}</span>  
+      </div>
+      <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+        <ul fxLayout="row" fxLayoutGap="20px">
+            <!-- <li>
+                <button mat-icon-button>
+                    <mat-icon>settings</mat-icon>
+                </button>
+            </li> -->
+            <li *ngIf="currentUser && (router.url==='/')">
+                <a mat-icon-button routerLink="/home">
+                    <mat-icon>dashboard</mat-icon>
+                </a>
+            </li>
+            <li>
+                <button mat-icon-button>
+                    <mat-icon>help</mat-icon>
+                </button>
+            </li>
+            <li *ngIf="currentUser">
+                <button mat-button [matMenuTriggerFor]="menu">
+                    <mat-icon class="mat-18">person_outline</mat-icon> {{currentUser?.user?.name}}
+                </button>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="logout()">
+                    <mat-icon class="mat-18">exit_to_app</mat-icon>
+                    Logout
+                </button>
+                </mat-menu>
+            </li>
+            <li *ngIf="!currentUser">
+                <a mat-button routerLink="/login">
+                    <mat-icon class="mat-18">assignment_ind</mat-icon>
+                </a>
+            </li>
+        </ul>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>

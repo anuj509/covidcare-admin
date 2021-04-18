@@ -1,0 +1,8 @@
+<p mat-dialog-title>{{data.title}}</p>
+<div mat-dialog-content>
+<p>Are you sure you want to delete <b>' {{data.name}} '</b> ?</p>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-raised-button (click)="onNoClick()">No</button>
+  <button mat-raised-button color="primary" (click)="onYesClick()" cdkFocusInitial>Yes</button>
+</div>

@@ -1,0 +1,25 @@
+<app-header (toggleSideBarForMe)="sideBarToggler($event)" (showHideSideBar)="showHideSideBar($event)"></app-header>
+
+<mat-drawer-container>
+    <mat-drawer [mode]="(screenWidth > 840) ? 'side' : 'over'" [opened]="sideBarOpen">
+        <app-sidebar (toggleSideBarForMe)="sideBarToggler($event)"></app-sidebar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <!-- breadcrumb -->
+        <div class="col">
+            <ol class="arrows">
+            <li *ngFor="let item of breadcrumbList; let i = index"
+                [class.active]="i===breadcrumbList.length-1">
+                <a [routerLink]="item.path.replace('.', '')" *ngIf="i!==breadcrumbList.length-1">
+                {{ item.name }}
+                </a>
+                <span *ngIf="i===breadcrumbList.length-1">{{ item.name }}</span>
+            </li>
+            </ol>
+        </div>
+        <alert></alert>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>

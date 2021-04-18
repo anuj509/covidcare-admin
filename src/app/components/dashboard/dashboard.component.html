@@ -1,0 +1,31 @@
+<div class="container">
+    <div fxLayout="row" fxLayoutAlign="space-around center" >
+        <div class="col-lg-4 mb-3">
+            <div class="oxygen status">
+                <h5>Oxygen Requests</h5>
+                <h2><span id="current-deposit">{{stats.oxygen}}</span></h2>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-3">
+            <div class="plasma status">
+                <h5>Plasma Requests</h5>
+                <h2><span id="current-withdraw">{{stats.plasma}}</span></h2>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 mb-3">
+            <div class="beds status">
+                <h5>Beds Requests</h5>
+                <h2><span id="current-balance">{{stats.bed}}</span></h2>
+            </div>
+         </div>
+
+         <div class="col-lg-4 mb-3">
+            <div class="medicines status">
+                <h5>Medicines Requests</h5>
+                <h2><span id="current-balance">{{stats.medicines}}</span></h2>
+            </div>
+         </div>
+    </div>
+</div>

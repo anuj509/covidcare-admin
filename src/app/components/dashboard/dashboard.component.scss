@@ -1,0 +1,34 @@
+#account-area {
+	margin-top: 5%;
+}
+
+.oxygen {
+	background-color: #A0E7E5;
+}
+
+.plasma {
+	background-color: #FFAEBC;
+}
+
+.medicines {
+	background-color: #B4F8C8;
+}
+
+.beds {
+	background-color: #FBE7C6;
+}
+
+.status {
+	margin: 0 20px;
+	color: white;
+	padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    display: flex;
+}
+
+.status > h2{
+	margin: 0 20px;
+	color: white;
+	padding: 20px;
+}

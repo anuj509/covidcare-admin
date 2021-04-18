@@ -1,0 +1,39 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Users</mat-card-title>
+        <!-- <a mat-raised-button color="primary" routerLink="/users/create" style="margin-right: 8px;">Create
+            User</a> -->
+        <span class="spacer"></span>
+    </mat-card-header>
+    <mat-card-content>
+        <ngx-table [data]="users" [configuration]="configuration" [columns]="columns">
+            <ng-template let-row>
+                <td>
+                    <div class="font-small">
+                        {{row.first_name}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.last_name}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.birthdate | date:'d/M/yyyy'}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.email}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.phone}}
+                    </div>
+                </td>
+            </ng-template>
+        </ngx-table>
+    </mat-card-content>
+</mat-card>

@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~ngx-easy-table/style.scss";
+
+:host ::ng-deep #table {
+  font-family: "Montserrat", sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.field-full-width {
+  width: 100%;
+}
+
+.template-dialog-container .mat-dialog-container {
+  padding: 0px !important;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
