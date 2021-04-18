@@ -16,6 +16,10 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { DeleteComponent } from '../delete/delete.component';
 import { UsersComponent } from '../users/users.component';
+import { ResourcesComponent } from '../resources/resources.component';
+import { CreateResourceComponent } from '../resources/create-resources/create-resource.component';
+import { EditResourceComponent } from '../resources/edit-resources/edit-resource.component';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -23,7 +27,10 @@ import { UsersComponent } from '../users/users.component';
     DashboardComponent,
     AlertComponent,
     DeleteComponent,
-    UsersComponent
+    UsersComponent,
+    ResourcesComponent,
+    CreateResourceComponent,
+    EditResourceComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +41,7 @@ import { UsersComponent } from '../users/users.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgxMatSelectSearchModule,
     ToastrModule.forRoot(),
     TableModule,
   ],

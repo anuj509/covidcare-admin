@@ -1,0 +1,44 @@
+<div class="company-wrapper" fxLayout="column" fxLayoutAlign="space-around stretch">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Create resource</mat-card-title>
+        </mat-card-header>
+        <form class="example-form" [formGroup]="resourceForm">
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <mat-select formControlName="category" placeholder="Select Category" #categorySelect>
+                        <ngx-mat-select-search [formControl]="categoryFilterCtrl" placeholderLabel="Find Category..."
+                            noEntriesFoundLabel="'no matching category found'"></ngx-mat-select-search>
+                        <mat-option *ngFor="let category of filteredCategories | async" [value]="category.name">
+                            {{category.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Name/Title" formControlName="name">
+                    <mat-hint align="end">Not more then 100 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Location" formControlName="location">
+                    <mat-hint align="end">Not more then 100 characters long.</mat-hint>
+                    <mat-error *ngIf="hasError('location', 'required')">Location is required</mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Phone" type="number" formControlName="phone">
+                    <mat-hint align="end">Enter Phone Number</mat-hint>
+                    <mat-error *ngIf="hasError('phone', 'required')">Phone is required</mat-error>
+                </mat-form-field>
+
+            </mat-card-content>
+
+        </form>
+        <mat-card-actions align="end">
+            <button mat-button (click)="onSubmit()" mat-stroked-button color="accent" [disabled]="!resourceForm.valid || loading"
+                class="btn-block">Create</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

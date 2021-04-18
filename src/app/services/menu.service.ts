@@ -10,22 +10,22 @@ export class MenuService {
     const menu = [
       { name: 'Dashboard', path: './home', children: [] },
       { name: 'Login', path: './login', children: [] },
-      // { 
-      //   name: 'Songs', 
-      //   path: './songs', 
-      //   children: [
-      //     {
-      //       name: 'Create Song',
-      //       path: './create',
-      //       children: []
-      //     },
-      //     {
-      //       name: 'Edit Song',
-      //       path: './edit',
-      //       children: []
-      //     }
-      //   ] 
-      // },
+      { 
+        name: 'Resources', 
+        path: './resources', 
+        children: [
+          {
+            name: 'Create Resource',
+            path: './create',
+            children: []
+          },
+          {
+            name: 'Edit Resource',
+            path: './edit',
+            children: []
+          }
+        ] 
+      },
       // { 
       //   name: 'Albums', 
       //   path: './albums', 

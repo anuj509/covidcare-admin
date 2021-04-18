@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Resources Master</mat-card-title>
+        <a mat-raised-button color="primary" routerLink="/resources/create" style="margin-right: 8px;">Create Resource</a>
+        <span class="spacer"></span>
+    </mat-card-header>
+    <mat-card-content>
+        <ngx-table [data]="resources" [configuration]="configuration" [columns]="columns"
+        [pagination]="pagination"
+        (event)="eventEmitted($event)">
+          <ng-template let-row>
+            <td>
+              <div class="font-small">
+                {{row.category}}
+              </div>
+            </td>
+            <td>
+              <div class="font-small">
+                {{row.name}}
+              </div>
+            </td>
+            <td>
+              <div class="font-small">
+                {{row.location}}
+              </div>
+            </td>
+            <td>
+              <div class="font-small">
+                {{row.phone}}
+              </div>
+            </td>
+            <td>
+              <button mat-stroked-button color="primary" style="margin-right: 8px;" (click)="editResource(row)">
+                <mat-icon aria-hidden="false" aria-label="Edit Resource">edit</mat-icon>
+                Edit
+              </button>
+              <button mat-stroked-button color="accent" (click)="deleteResource(row)">
+                <mat-icon aria-hidden="false" aria-label="Delete Resource">delete</mat-icon>
+                Delete
+              </button>
+            </td>
+          </ng-template>
+        </ngx-table>
+    </mat-card-content>
+</mat-card>

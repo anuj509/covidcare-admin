@@ -4,6 +4,9 @@ import { DefaultComponent } from './components/default/default.component';
 import { LogInComponent } from './components/log-in/log-in.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './helpers/auth.guard';
+import { ResourcesComponent } from './components/resources/resources.component';
+import { CreateResourceComponent } from './components/resources/create-resources/create-resource.component';
+import { EditResourceComponent } from './components/resources/edit-resources/edit-resource.component';
 
 
 const routes: Routes = [
@@ -25,21 +28,21 @@ const routes: Routes = [
         component: DashboardComponent,
         canActivate: [AuthGuard]
       },
-      // {
-      //   path: 'songs',
-      //   component: SongsComponent,
-      //   canActivate: [AuthGuard]
-      // },
-      // {
-      //   path: 'songs/create',
-      //   component: CreateSongComponent,
-      //   canActivate: [AuthGuard]
-      // },
-      // {
-      //   path: 'songs/edit/:id',
-      //   component: EditSongComponent,
-      //   canActivate: [AuthGuard]
-      // }
+      {
+        path: 'resources',
+        component: ResourcesComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'resources/create',
+        component: CreateResourceComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'resources/edit/:id',
+        component: EditResourceComponent,
+        canActivate: [AuthGuard]
+      }
     ]
   }
 ];
