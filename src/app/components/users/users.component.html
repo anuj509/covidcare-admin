@@ -1,8 +1,8 @@
 <mat-card>
     <mat-card-header>
         <mat-card-title>Users</mat-card-title>
-        <!-- <a mat-raised-button color="primary" routerLink="/users/create" style="margin-right: 8px;">Create
-            User</a> -->
+        <a mat-raised-button color="primary" routerLink="/users/create" style="margin-right: 8px;">Create
+            User</a>
         <span class="spacer"></span>
     </mat-card-header>
     <mat-card-content>
@@ -10,17 +10,7 @@
             <ng-template let-row>
                 <td>
                     <div class="font-small">
-                        {{row.first_name}}
-                    </div>
-                </td>
-                <td>
-                    <div class="font-small">
-                        {{row.last_name}}
-                    </div>
-                </td>
-                <td>
-                    <div class="font-small">
-                        {{row.birthdate | date:'d/M/yyyy'}}
+                        {{row.name}}
                     </div>
                 </td>
                 <td>
@@ -29,10 +19,11 @@
                     </div>
                 </td>
                 <td>
-                    <div class="font-small">
-                        {{row.phone}}
-                    </div>
-                </td>
+                    <button mat-stroked-button color="accent" (click)="deleteUser(row)">
+                      <mat-icon aria-hidden="false" aria-label="Delete User">delete</mat-icon>
+                      Delete
+                    </button>
+                  </td>
             </ng-template>
         </ngx-table>
     </mat-card-content>

@@ -17,4 +17,13 @@ export class UserService {
     getUser(userId){
       return this.http.get<any>(`${config.apiUrl}/users/${userId}`)
     }
+
+    userCreate(user){
+      // console.log(resource);
+      return this.http.post<any>(`${config.apiUrl}/users`,user);
+    }
+
+    deleteUser(userId){
+      return this.http.delete<any>(`${config.apiUrl}/users/${userId}`)
+    }
 }

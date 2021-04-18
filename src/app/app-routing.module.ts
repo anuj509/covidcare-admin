@@ -8,6 +8,8 @@ import { ResourcesComponent } from './components/resources/resources.component';
 import { CreateResourceComponent } from './components/resources/create-resources/create-resource.component';
 import { EditResourceComponent } from './components/resources/edit-resources/edit-resource.component';
 import { FeedsComponent } from './components/feeds/feeds.component';
+import { UsersComponent } from './components/users/users.component';
+import { CreateUserComponent } from './components/users/create-users/create-user.component';
 
 
 const routes: Routes = [
@@ -48,7 +50,17 @@ const routes: Routes = [
         path: 'feeds',
         component: FeedsComponent,
         canActivate: [AuthGuard]
-      }
+      },
+      {
+        path: 'users',
+        component: UsersComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'users/create',
+        component: CreateUserComponent,
+        canActivate: [AuthGuard]
+      },
     ]
   }
 ];

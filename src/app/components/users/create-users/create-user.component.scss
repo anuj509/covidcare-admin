@@ -1,0 +1,50 @@
+:host {
+    mat-card {
+      margin-bottom: 32px;
+    }
+  
+    .company-wrapper .example-form {
+      min-width: 100%;
+      // max-width: 300px;
+      width: 100%;
+    }
+  
+    .company-wrapper .example-full-width,
+    .company-wrapper .btn-block {
+      width: 100%;
+    }
+    .mat-icon {
+      vertical-align: middle;
+      margin-right: 20px;
+    }
+    
+    .company-wrapper .mat-card {
+      padding: 40px 70px 50px;
+    }
+  
+    .company-wrapper .mat-stroked-button {
+      border: 1px solid currentColor;
+      line-height: 54px;
+      background: #fff7fa;
+    }
+  
+    .company-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
+      padding: 0.8375em 0;
+    }
+  
+    
+    @media only screen and (max-width: 320px) {
+      /* Small screen */
+      .company-wrapper .mat-card {
+        padding: 10px;
+      }
+    }
+  
+    @media only screen and (min-width: 321px) and (max-width: 538px) {
+      /* Medium screen */
+      .company-wrapper .mat-card {
+        padding: 10px;
+      }
+    }
+  }
+  

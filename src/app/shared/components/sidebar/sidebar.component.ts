@@ -16,6 +16,7 @@ export class SidebarComponent implements OnInit {
   ) {
     this.authenticationService.currentUser.subscribe(x => {
       this.currentUser = x;
+      // console.log(x);
     });
 
     this.screenWidth = window.innerWidth;

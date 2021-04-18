@@ -47,13 +47,11 @@ export class UsersComponent implements OnInit, OnDestroy {
     this.configuration.orderEnabled = true;
     this.configuration.searchEnabled = true;
     this.configuration.threeWaySort = true;
-    this.configuration.rows = 4;
+    this.configuration.rows = 10;
     this.columns = [
-      { key: 'first_name', title: 'First Name' },
-      { key: 'last_name', title: 'Last Name' },
-      { key: 'birthdate', title: 'Birth Date' },
+      { key: 'name', title: 'Name' },
       { key: 'email', title: 'Email' },
-      { key: 'phone', title: 'Phone' }
+      { key: 'id', title: 'Action', searchEnabled:false },
     ];
     this.getUsers('');
   }
@@ -92,6 +90,22 @@ export class UsersComponent implements OnInit, OnDestroy {
       this.cdr.detectChanges();
     },(error)=>{
       this.alertService.error(error);
+    });
+  }
+
+  deleteUser(user) {
+    const dialogRef = this.dialog.open(DeleteComponent, {
+      width: '363px',
+      data: {title:"Delete Resource Confirmation",name:user.email}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      //console.log('The dialog was closed',result);
+      if(result){
+        this.userService.deleteUser(user.id).subscribe(response => {
+          this.getUsers('');
+        });
+      }   
     });
   }
 }

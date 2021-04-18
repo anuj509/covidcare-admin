@@ -16,8 +16,7 @@
     <a mat-list-item routerLinkActive="active" routerLink="/home" (click)="toggleSideBar()">Dashboard</a>
     <a mat-list-item routerLinkActive="active" routerLink="/resources" (click)="toggleSideBar()">Resources</a>
     <a mat-list-item routerLinkActive="active" routerLink="/feeds" (click)="toggleSideBar()">Feeds</a>
-    <!-- <a mat-list-item routerLinkActive="active" routerLink="/albums" (click)="toggleSideBar()">Albums</a>
-    <a mat-list-item routerLinkActive="active" routerLink="/users" (click)="toggleSideBar()">Users</a> -->
+    <a *ngIf="currentUser?.user?.email=='app@gfxbandits.com'" mat-list-item routerLinkActive="active" routerLink="/users" (click)="toggleSideBar()">Users</a> 
     <!-- <a mat-list-item routerLinkActive="active" routerLink="/companies" (click)="toggleSideBar()" [appCan]="'company-list'">Companies</a>
     <a mat-list-item routerLinkActive="active" routerLink="/groups" (click)="toggleSideBar()" [appCan]="'group-list'">Groups</a>
     <a mat-list-item routerLinkActive="active" routerLink="/routes" (click)="toggleSideBar()" [appCan]="'route-list'">Routes</a>

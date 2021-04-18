@@ -31,11 +31,17 @@ export class MenuService {
         path: './feeds', 
         children: [] 
       },
-      // { 
-      //   name: 'Users', 
-      //   path: './users', 
-      //   children: [] 
-      // }
+      { 
+        name: 'Users', 
+        path: './users', 
+        children: [
+          {
+            name: 'Create User',
+            path: './create',
+            children: []
+          }
+        ] 
+      }
     ];
 
     return menu;
