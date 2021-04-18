@@ -26,22 +26,11 @@ export class MenuService {
           }
         ] 
       },
-      // { 
-      //   name: 'Albums', 
-      //   path: './albums', 
-      //   children: [
-      //     {
-      //       name: 'Create Album',
-      //       path: './create',
-      //       children: []
-      //     },
-      //     {
-      //       name: 'Edit Album',
-      //       path: './edit',
-      //       children: []
-      //     }
-      //   ] 
-      // },
+      { 
+        name: 'Feeds', 
+        path: './feeds', 
+        children: [] 
+      },
       // { 
       //   name: 'Users', 
       //   path: './users', 

@@ -20,6 +20,7 @@ import { ResourcesComponent } from '../resources/resources.component';
 import { CreateResourceComponent } from '../resources/create-resources/create-resource.component';
 import { EditResourceComponent } from '../resources/edit-resources/edit-resource.component';
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
+import { FeedsComponent } from '../feeds/feeds.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -30,7 +31,8 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
     UsersComponent,
     ResourcesComponent,
     CreateResourceComponent,
-    EditResourceComponent
+    EditResourceComponent,
+    FeedsComponent
   ],
   imports: [
     CommonModule,

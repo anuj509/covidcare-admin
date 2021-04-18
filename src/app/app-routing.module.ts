@@ -7,6 +7,7 @@ import { AuthGuard } from './helpers/auth.guard';
 import { ResourcesComponent } from './components/resources/resources.component';
 import { CreateResourceComponent } from './components/resources/create-resources/create-resource.component';
 import { EditResourceComponent } from './components/resources/edit-resources/edit-resource.component';
+import { FeedsComponent } from './components/feeds/feeds.component';
 
 
 const routes: Routes = [
@@ -41,6 +42,11 @@ const routes: Routes = [
       {
         path: 'resources/edit/:id',
         component: EditResourceComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'feeds',
+        component: FeedsComponent,
         canActivate: [AuthGuard]
       }
     ]
