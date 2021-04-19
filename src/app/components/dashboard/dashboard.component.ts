@@ -9,7 +9,7 @@ import { AlertService } from '@app/services/alert.service';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  stats = {};
+  stats = {oxygen:0,plasma:0,medicines:0,bed:0};
   constructor(private statsService: StatsService,private alertService: AlertService) {
     this.statsService.getStats()
           .pipe(first())

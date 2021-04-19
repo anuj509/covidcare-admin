@@ -101,7 +101,7 @@ export class ResourcesComponent implements OnInit {
   deleteResource(resource) {
     const dialogRef = this.dialog.open(DeleteComponent, {
       width: '363px',
-      data: {title:"Delete Resource Confirmation",name:resource.title}
+      data: {title:"Delete Resource Confirmation",name:resource.name}
     });
 
     dialogRef.afterClosed().subscribe(result => {

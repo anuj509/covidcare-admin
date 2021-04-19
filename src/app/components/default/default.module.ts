@@ -22,6 +22,7 @@ import { EditResourceComponent } from '../resources/edit-resources/edit-resource
 import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { FeedsComponent } from '../feeds/feeds.component';
 import { CreateUserComponent } from '../users/create-users/create-user.component';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -46,6 +47,7 @@ import { CreateUserComponent } from '../users/create-users/create-user.component
     ReactiveFormsModule,
     HttpClientModule,
     NgxMatSelectSearchModule,
+    MaterialFileInputModule,
     ToastrModule.forRoot(),
     TableModule,
   ],
