@@ -1,5 +1,16 @@
 @import '~@angular/material/theming';
-$app-primary: mat-palette($mat-indigo);
+$mat-primary: (
+  main: #1c1f51,
+  lighter: #bbbccb,
+  darker: #111237,
+  200: #1c1f51, // For slide toggle,
+  contrast : (
+    main: $light-primary-text,
+    lighter: $dark-primary-text,
+    darker: $light-primary-text,
+  )
+);
+$app-primary: mat-palette($mat-primary, main, lighter, darker);
 $primary: mat-color($app-primary);
 $text-primary: white;
 :host {
