@@ -96,7 +96,7 @@ export class UsersComponent implements OnInit, OnDestroy {
   deleteUser(user) {
     const dialogRef = this.dialog.open(DeleteComponent, {
       width: '363px',
-      data: {title:"Delete Resource Confirmation",name:user.email}
+      data: {title:"Delete User Confirmation",name:user.email}
     });
 
     dialogRef.afterClosed().subscribe(result => {

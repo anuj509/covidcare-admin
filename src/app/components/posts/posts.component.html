@@ -1,0 +1,69 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>Posts</mat-card-title>
+        
+        <span class="spacer"></span>
+    </mat-card-header>
+    <mat-card-content>
+        <ngx-table [data]="posts" [configuration]="configuration" [columns]="columns" [pagination]="pagination" (event)="eventEmitted($event)">
+            <ng-template let-row>
+                <td>
+                    <div class="font-small">
+                        {{row.name}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.dob | date: 'dd/MM/yyyy'}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.gender}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.blood_group}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.oxygen_level}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.poc_name}}<br>
+                        {{row.poc_contact}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.patient_currently_admitted_at}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.ward}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        <div [innerHTML]="formatRequirement(row,row.requirement)"></div>
+                    </div>
+                </td>
+                <td>
+                    <button mat-stroked-button color="primary" style="margin-right: 8px;" (click)="closePost(row)">
+                        <mat-icon aria-hidden="false" aria-label="Close Post">close</mat-icon>
+                        Close
+                      </button>
+                    <button mat-stroked-button color="accent" (click)="deletePost(row)">
+                      <mat-icon aria-hidden="false" aria-label="Delete Post">delete</mat-icon>
+                      Delete
+                    </button>
+                  </td>
+            </ng-template>
+        </ngx-table>
+    </mat-card-content>
+</mat-card>

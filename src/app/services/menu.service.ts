@@ -41,6 +41,11 @@ export class MenuService {
             children: []
           }
         ] 
+      },
+      { 
+        name: 'Posts', 
+        path: './posts', 
+        children: [] 
       }
     ];
 

@@ -23,6 +23,7 @@ import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { FeedsComponent } from '../feeds/feeds.component';
 import { CreateUserComponent } from '../users/create-users/create-user.component';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { PostsComponent } from '../posts/posts.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -35,7 +36,8 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     CreateResourceComponent,
     EditResourceComponent,
     FeedsComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    PostsComponent
   ],
   imports: [
     CommonModule,

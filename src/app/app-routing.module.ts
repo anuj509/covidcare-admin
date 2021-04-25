@@ -10,6 +10,7 @@ import { EditResourceComponent } from './components/resources/edit-resources/edi
 import { FeedsComponent } from './components/feeds/feeds.component';
 import { UsersComponent } from './components/users/users.component';
 import { CreateUserComponent } from './components/users/create-users/create-user.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,11 @@ const routes: Routes = [
       {
         path: 'feeds',
         component: FeedsComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path: 'posts',
+        component: PostsComponent,
         canActivate: [AuthGuard]
       },
       {
