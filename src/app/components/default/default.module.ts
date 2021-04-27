@@ -24,6 +24,7 @@ import { FeedsComponent } from '../feeds/feeds.component';
 import { CreateUserComponent } from '../users/create-users/create-user.component';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { PostsComponent } from '../posts/posts.component';
+import { UpdateStatusComponent } from '../posts/update-status/update-status.component';
 @NgModule({
   declarations: [
     DefaultComponent,
@@ -37,7 +38,8 @@ import { PostsComponent } from '../posts/posts.component';
     EditResourceComponent,
     FeedsComponent,
     CreateUserComponent,
-    PostsComponent
+    PostsComponent,
+    UpdateStatusComponent
   ],
   imports: [
     CommonModule,
@@ -54,7 +56,8 @@ import { PostsComponent } from '../posts/posts.component';
     TableModule,
   ],
   entryComponents:[
-    DeleteComponent
+    DeleteComponent,
+    UpdateStatusComponent
   ],
   providers:[{
     provide: MatDialogRef,

@@ -30,4 +30,8 @@ export class PostService {
     closePost(post,data){
       return this.http.post<any>(`${config.apiUrl}/posts/statusupdate/${post.user_id}`,data);
     }
+
+    updatePostStatus(data){
+      return this.http.post<any>(`${config.apiUrl}/posts/status/admin`,data);
+    }
 }

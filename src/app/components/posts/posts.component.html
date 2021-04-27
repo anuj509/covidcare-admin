@@ -54,10 +54,24 @@
                     </div>
                 </td>
                 <td>
+                    <div class="font-small">
+                        {{row.status}}
+                    </div>
+                </td>
+                <td>
+                    <div class="font-small">
+                        {{row.admin_comment}}
+                    </div>
+                </td>
+                <td>
+                    <button mat-stroked-button color="primary" style="margin-right: 8px;" (click)="updatePostStatus(row)">
+                        <mat-icon aria-hidden="false" aria-label="update Post Status">donut_large</mat-icon>
+                        Update Status
+                    </button>
                     <button mat-stroked-button color="primary" style="margin-right: 8px;" (click)="closePost(row)">
                         <mat-icon aria-hidden="false" aria-label="Close Post">close</mat-icon>
                         Close
-                      </button>
+                    </button>
                     <button mat-stroked-button color="accent" (click)="deletePost(row)">
                       <mat-icon aria-hidden="false" aria-label="Delete Post">delete</mat-icon>
                       Delete
