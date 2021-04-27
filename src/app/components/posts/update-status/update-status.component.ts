@@ -18,7 +18,7 @@ export class UpdateStatusComponent implements OnInit {
   submitted = false;
   returnUrl: string;
   error = '';
-  private statuses = ["pending","inprogress","closed","onhold"];
+  statuses = ["pending","inprogress","closed","onhold"];
   private _onDestroy = new Subject<void>();
   constructor(
     private formBuilder: FormBuilder,
